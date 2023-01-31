@@ -34,34 +34,68 @@ public class Joc_vaixells {
                 array[j+(fila-1)][column-1] = 'x';
             }
         }
+        else{
+            for (int i = fila; i < largo ;i++){
+                array[i+fila][column] = 'x';
+            }
+        }
     }
 
     public static void main(String[] args) {
-        char [][] mapa = new char[10][10];
+        boolean guanya= true;
+        int cont= 1;
+        char [][] mapaJug1 = new char[10][10];
+        char [][] mapaJug2 = new char[10][10];
         int grandariaVaixell;
         char size = 'l';
         int filaUbicacio;
         int colUbicacio;
         System.out.println("*** COMENÇCEM EL JOC ***");
-        initMapa(mapa);
-        pintarMapa(mapa);
-        do {
-            System.out.println("Indica la grandaria del vaixell --> (ha de ser entre 2-4) ");
-            grandariaVaixell = t.nextInt();
-        }while (grandariaVaixell < 2 || grandariaVaixell > 4);
+        initMapa(mapaJug1);
+        pintarMapa(mapaJug1);
 
-        do {
-            System.out.println("Indica si el vols vertical *v* o horitzontal *h* ");
-            size = t.next().charAt(0);
-        }while (size != 'v' && size != 'h');
+        while (guanya==true) {
+            if (cont % 2 != 0) {
 
-        System.out.println("Indica la fila on vols ficar el vaixell --> ");
-        filaUbicacio = t.nextInt();
-        System.out.println("Indica la columna on vols ficar el vaixell --> ");
-        colUbicacio = t.nextInt();
-        posicionamentVaixell(size, mapa, filaUbicacio, colUbicacio, grandariaVaixell);
-        pintarMapa(mapa);
+                do {
+                    System.out.println("Jugador 1 indica la grandaria del vaixell  --> (ha de ser entre 2-4) ");
+                    grandariaVaixell = t.nextInt();
+                } while (grandariaVaixell < 2 || grandariaVaixell > 4);
 
+                do {
+                    System.out.println("Jugador indica si el vols vertical *v* o horitzontal *h* ");
+                    size = t.next().charAt(0);
+                } while (size != 'v' && size != 'h');
+
+                System.out.println("Jugador 1 indica la fila on vols ficar el vaixell --> ");
+                filaUbicacio = t.nextInt();
+                System.out.println("Jugador 1 indica la columna on vols ficar el vaixell --> ");
+                colUbicacio = t.nextInt();
+                posicionamentVaixell(size, mapaJug1, filaUbicacio, colUbicacio, grandariaVaixell);
+                pintarMapa(mapaJug1);
+                cont++;
+            }
+            else{
+
+                do {
+                    System.out.println("Jugador 2 indica la grandaria del vaixell --> (ha de ser entre 2-4) ");
+                    grandariaVaixell = t.nextInt();
+                } while (grandariaVaixell < 2 || grandariaVaixell > 4);
+
+                do {
+                    System.out.println("Jugador 2 indica si el vols vertical *v* o horitzontal *h* ");
+                    size = t.next().charAt(0);
+                } while (size != 'v' && size != 'h');
+
+                System.out.println("Jugador 2 indica la fila on vols ficar el vaixell --> ");
+                filaUbicacio = t.nextInt();
+                System.out.println("Jugador 2 indica la columna on vols ficar el vaixell --> ");
+                colUbicacio = t.nextInt();
+                posicionamentVaixell(size, mapaJug2, filaUbicacio, colUbicacio, grandariaVaixell);
+                pintarMapa(mapaJug2);
+                cont++;
+            }
+        }
 
 
     }
