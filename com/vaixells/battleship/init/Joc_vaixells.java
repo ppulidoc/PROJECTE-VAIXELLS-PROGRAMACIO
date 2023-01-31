@@ -34,11 +34,6 @@ public class Joc_vaixells {
                 array[j+(fila-1)][column-1] = 'x';
             }
         }
-        else{
-            for (int i = fila; i < largo ;i++){
-                array[i+fila][column] = 'x';
-            }
-        }
     }
 
     public static void main(String[] args) {
@@ -53,11 +48,13 @@ public class Joc_vaixells {
         System.out.println("*** COMENÇCEM EL JOC ***");
         initMapa(mapaJug1);
         initMapa(mapaJug2);
-        pintarMapa(mapaJug1);
+
+
 
         while (guanya) {
             if (cont % 2 != 0) {
-
+                System.out.println(" * MAPA DEL JUGADOR 1 BUID * ");
+                pintarMapa(mapaJug1);
                 do {
                     System.out.println("Jugador 1 indica la grandaria del vaixell  --> (ha de ser entre 2-4) ");
                     grandariaVaixell = t.nextInt();
@@ -73,11 +70,13 @@ public class Joc_vaixells {
                 System.out.println("Jugador 1 indica la columna on vols ficar el vaixell --> ");
                 colUbicacio = t.nextInt();
                 posicionamentVaixell(size, mapaJug1, filaUbicacio, colUbicacio, grandariaVaixell);
+                System.out.println(" * MAPA JUGADOR 1 AMB BAARCO ASSIGNAT  * ");
                 pintarMapa(mapaJug1);
                 cont++;
             }
             else{
-
+                System.out.println(" * MAPA DEL JUGADOR 2 BUID * ");
+                pintarMapa(mapaJug2);
                 do {
                     System.out.println("Jugador 2 indica la grandaria del vaixell --> (ha de ser entre 2-4) ");
                     grandariaVaixell = t.nextInt();
@@ -93,6 +92,7 @@ public class Joc_vaixells {
                 System.out.println("Jugador 2 indica la columna on vols ficar el vaixell --> ");
                 colUbicacio = t.nextInt();
                 posicionamentVaixell(size, mapaJug2, filaUbicacio, colUbicacio, grandariaVaixell);
+                System.out.println(" * MAPA JUGADOR 2 AMB BAARCO ASSIGNAT  * ");
                 pintarMapa(mapaJug2);
                 cont++;
             }
