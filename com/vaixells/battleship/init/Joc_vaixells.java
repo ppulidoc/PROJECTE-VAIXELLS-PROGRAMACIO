@@ -32,13 +32,13 @@ public class Joc_vaixells {
         }
         if (direccion == 'h') {
             for (int j = 0; j < largo; j++) {
-                array[j + (fila - 1)][column - 1] = 'x';
+                array[fila - 1][(column - 1) + j] = 'x';
             }
         }
     }
 
-    public static void atacar(char[][] array, int fila, int column, int largo) {
-
+    public static void atacVaixell(char[][] array, int fila, int column) {
+        System.out.println("On vols atacar: ");
     }
 
     public static void main(String[] args) {
@@ -100,7 +100,7 @@ public class Joc_vaixells {
                     cont++;
                 }
             }
-
+            atacVaixell(mapaJug1,filaUbicacio,colUbicacio);
         }
     }
 }
