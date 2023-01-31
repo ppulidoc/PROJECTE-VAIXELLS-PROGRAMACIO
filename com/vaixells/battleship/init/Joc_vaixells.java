@@ -55,12 +55,14 @@ public class Joc_vaixells {
         System.out.println();
         initMapa(mapaJug1);
         initMapa(mapaJug2);
-        pintarMapa(mapaJug1);
+
         pintarMapa(mapaJug2);
 
         while (guanya) {
             while (vaixellColocat) {
                 if (cont % 2 != 0) {
+                    System.out.println(" * MAPA VACIO JUG 1 * ");
+                    pintarMapa(mapaJug1);
                     do {
                         System.out.println("Jugador 1 indica la grandaria del vaixell  --> (ha de ser entre 2-4) ");
                         grandariaVaixell = t.nextInt();
@@ -76,10 +78,12 @@ public class Joc_vaixells {
                     System.out.println("Jugador 1 indica la columna on vols ficar el vaixell --> ");
                     colUbicacio = t.nextInt();
                     posicionamentVaixell(size, mapaJug1, filaUbicacio, colUbicacio, grandariaVaixell);
+                    System.out.println(" * MAPA LLENADO JUG 1 * ");
                     pintarMapa(mapaJug1);
                     cont++;
                 } else {
-
+                    System.out.println(" * MAPA VACIO JUG 2 * ");
+                    pintarMapa(mapaJug2);
                     do {
                         System.out.println("Jugador 2 indica la grandaria del vaixell --> (ha de ser entre 2-4) ");
                         grandariaVaixell = t.nextInt();
@@ -95,6 +99,7 @@ public class Joc_vaixells {
                     System.out.println("Jugador 2 indica la columna on vols ficar el vaixell --> ");
                     colUbicacio = t.nextInt();
                     posicionamentVaixell(size, mapaJug2, filaUbicacio, colUbicacio, grandariaVaixell);
+                    System.out.println(" * MAPA LLENADO JUG 2 * ");
                     pintarMapa(mapaJug2);
                     vaixellColocat=false;
                     cont++;
