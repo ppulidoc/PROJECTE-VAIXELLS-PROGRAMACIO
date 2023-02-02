@@ -45,6 +45,7 @@ public class Joc_vaixells {
         boolean guanya = true;
         boolean vaixellColocat = true;
         int cont = 1;
+        int contGeneral = 1;
         char[][] mapaJug1 = new char[10][10];
         char[][] mapaJug2 = new char[10][10];
         int grandariaVaixell;
@@ -100,7 +101,7 @@ public class Joc_vaixells {
                     cont++;
                 }
             }
-            atacVaixell(mapaJug1,filaUbicacio,colUbicacio);
+
         }
     }
 }
