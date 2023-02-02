@@ -32,19 +32,20 @@ public class Joc_vaixells {
         }
         if (direccion == 'h') {
             for (int j = 0; j < largo; j++) {
-                array[j + (fila - 1)][column - 1] = 'x';
+                array[fila - 1][(column - 1) + j] = 'x';
             }
         }
     }
 
-    public static void atacar(char[][] array, int fila, int column, int largo) {
-
+    public static void atacVaixell(char[][] array, int fila, int column) {
+        System.out.println("On vols atacar: ");
     }
 
     public static void main(String[] args) {
         boolean guanya = true;
         boolean vaixellColocat = true;
         int cont = 1;
+        int contGeneral = 1;
         char[][] mapaJug1 = new char[10][10];
         char[][] mapaJug2 = new char[10][10];
         int grandariaVaixell;
