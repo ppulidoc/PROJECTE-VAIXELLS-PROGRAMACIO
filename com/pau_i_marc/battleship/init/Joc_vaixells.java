@@ -1,5 +1,6 @@
-package com.vaixells.battleship.init;
-import com.vaixells.battleship.io.*;
+package com.pau_i_marc.battleship.init;
+import com.pau_i_marc.battleship.io.Map;
+import com.pau_i_marc.battleship.io.*;
 
 import java.util.Scanner;
 public class Joc_vaixells {

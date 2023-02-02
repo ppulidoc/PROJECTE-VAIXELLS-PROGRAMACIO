@@ -1,4 +1,4 @@
-package com.vaixells.battleship.io;
+package com.pau_i_marc.battleship.io;
 
 public class Map {
     public static void pintarMapa(char[][] array) {

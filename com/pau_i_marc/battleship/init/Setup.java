@@ -1,4 +1,4 @@
-package com.vaixells.battleship.init;
+package com.pau_i_marc.battleship.init;
 
 public class Init {
 
