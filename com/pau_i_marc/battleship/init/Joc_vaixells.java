@@ -1,4 +1,5 @@
 package com.pau_i_marc.battleship.init;
+import com.pau_i_marc.battleship.game.Atac;
 import com.pau_i_marc.battleship.io.Map;
 import com.pau_i_marc.battleship.io.*;
 
@@ -45,6 +46,8 @@ public class Joc_vaixells {
         System.out.println();
         Init.initMapa(mapaJug1);
         Init.initMapa(mapaJug2);
+        Init.initMapa(mapaIntentosJug1);
+        Init.initMapa(mapaIntentosJug2);
         Map.pintarMapa(mapaJug1);
         Map.pintarMapa(mapaJug2);
 
